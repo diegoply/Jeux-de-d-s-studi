@@ -1,4 +1,17 @@
 body{
    background-image: url("./image/tapis\ de\ jeu.jpg"); 
+   height: 1200px;
+   display: flex;
    
+}
+
+#lancerDés{
+    width: 20px;
+    height: 30px;
+}
+
+#imageDés{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
