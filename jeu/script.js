@@ -12,6 +12,7 @@ function choixNumDés(){
         $(document).ready(function(){
             $('#imageDés').html(`<img src="./image/dés 1.jpg">`);
         });
+        
     }
 
     else if  (numDés == 2){
