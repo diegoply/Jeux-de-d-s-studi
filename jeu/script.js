@@ -12,7 +12,8 @@ function choixNumDés(){
         $(document).ready(function(){
             $('#imageDés').html(`<img src="./image/Dés 1.png">`);
         });
-        var valeurDés = 1;
+        let valeurDés = 1;
+        console.log(valeurDés);
         return valeurDés;
 
     }
@@ -23,7 +24,8 @@ function choixNumDés(){
             $('#imageDés').html(`<img src="./image/Dés 2.png">`);
         });
 
-        var valeurDés = 2;
+        let valeurDés = 2;
+        console.log(valeurDés);
         return valeurDés;
     }
     else if (numDés == 3){
@@ -32,7 +34,8 @@ function choixNumDés(){
             $('#imageDés').html(`<img src="./image/Dés 3.png">`);
         });
 
-        var valeurDés = 3;
+        let valeurDés = 3;
+        console.log(valeurDés);
         return valeurDés;
     }
     else if (numDés == 4){
@@ -41,7 +44,8 @@ function choixNumDés(){
             $('#imageDés').html(`<img src="./image/Dés 4.png">`);
         });
 
-        var valeurDés = 4;
+        let valeurDés = 4;
+        console.log(valeurDés);
         return valeurDés;
     }
     else if (numDés == 5){
@@ -50,7 +54,8 @@ function choixNumDés(){
             $('#imageDés').html(`<img src="./image/Dés 5.png">`);
         });
 
-        var valeurDés = 5;
+        let valeurDés = 5;
+        console.log(valeurDés);
         return valeurDés;
     }
     else{
@@ -58,15 +63,22 @@ function choixNumDés(){
         $(document).ready(function(){
             $('#imageDés').html(`<img src="./image/Dés 6.png">`);
         });
-         var valeurDés = 6;
+         let valeurDés = 6;
+         console.log(valeurDés);
         return valeurDés;
     }
-}
 
+
+}
+function compteur(valeurDés){
+    let compteur = compteur + valeurDés;
+    console.log(compteur);
+}
 
 
 $('#lancerDés').on('click',function(){
     choixNumDés();
+    compteur();
    
 
 });
