@@ -1,10 +1,10 @@
 $('#lancerDés').on('click',function(){
    
-    var numDes = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
+    var numDes = Math.floor(Math.random() *6) +1;
 
-    choixNumDés()
-    compteur()
-    function choixNumDés(){
+    choixNumDés(numDes)
+    compteur(compt, numeroDes(numDes))
+    function choixNumDés(numDes){
 
     
     
@@ -64,64 +64,10 @@ $('#lancerDés').on('click',function(){
 
     }
 
-    let numeroDes = function renvoiValeurDes(){
+    function numeroDes(numDes){
 
     
-    
-
-        if (numDes == 1){
-          
-            
-             let valeurDes = 1;
-             return valeurDes;
-           
-          
-    
-        }
-    
-        else if  (numDes == 2){
-    
-           
-    
-            let valeurDes = 2;
-            return valeurDes;
-
-          
-        }
-        else if (numDes == 3){
-    
-           
-            let valeurDes = 3;
-            return valeurDes;
-      
-         
-        }
-        else if (numDes == 4){
-    
-            
-    
-            let valeurDes = 4;
-            return valeurDes;
-        
-          
-        }
-        else if (numDes == 5){
-            
-           
-    
-            let valeurDes = 5;
-            return valeurDes;
-        
-        
-        }
-        else{
-           
-           
-             let valeurDes = 6;
-             return valeurDes;
-           
-            
-        }
+    return numDes;
        
       
     }
@@ -138,6 +84,7 @@ function compteur(compt, numeroDes){
     let b = numeroDes;
     
     a = a + b;
+
     console.log(b)
     console.log(a);
     
