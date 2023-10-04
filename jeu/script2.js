@@ -3,6 +3,7 @@ $('#lancerDés').on('click',function(){
     var numDes = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
 
     choixNumDés()
+    compteur()
     function choixNumDés(){
 
     
@@ -13,9 +14,7 @@ $('#lancerDés').on('click',function(){
             $(document).ready(function(){
                 $('#imageDés').html(`<img src="./image/Dés 1.png">`);
             });
-            let valeurDes = 1;
-            console.log(valeurDes);
-            return valeurDes;
+           
           
     
         }
@@ -26,9 +25,6 @@ $('#lancerDés').on('click',function(){
                 $('#imageDés').html(`<img src="./image/Dés 2.png">`);
             });
     
-            let valeurDes = 2;
-            console.log(valeurDes);
-            return valeurDes;
           
         }
         else if (numDes == 3){
@@ -37,9 +33,7 @@ $('#lancerDés').on('click',function(){
                 $('#imageDés').html(`<img src="./image/Dés 3.png">`);
             });
     
-            let valeurDes = 3;
-            console.log(valeurDes);
-            return valeurDes;
+            
          
         }
         else if (numDes == 4){
@@ -48,9 +42,6 @@ $('#lancerDés').on('click',function(){
                 $('#imageDés').html(`<img src="./image/Dés 4.png">`);
             });
     
-            let valeurDes = 4;
-            console.log(valeurDes);
-            return valeurDes;
           
         }
         else if (numDes == 5){
@@ -58,10 +49,7 @@ $('#lancerDés').on('click',function(){
             $(document).ready(function(){
                 $('#imageDés').html(`<img src="./image/Dés 5.png">`);
             });
-    
-            let valeurDes = 5;
-            console.log(valeurDes);
-            return valeurDes;
+   
         
         }
         else{
@@ -69,15 +57,92 @@ $('#lancerDés').on('click',function(){
             $(document).ready(function(){
                 $('#imageDés').html(`<img src="./image/Dés 6.png">`);
             });
-             let valeurDes = 6;
-             console.log(valeurDes);
-             return valeurDes;
+            
             
         }
        
 
     }
+
+    let numeroDes = function renvoiValeurDes(){
+
+    
+    
+
+        if (numDes == 1){
+          
+            
+             let valeurDes = 1;
+             return valeurDes;
+           
+          
+    
+        }
+    
+        else if  (numDes == 2){
+    
+           
+    
+            let valeurDes = 2;
+            return valeurDes;
+
+          
+        }
+        else if (numDes == 3){
+    
+           
+            let valeurDes = 3;
+            return valeurDes;
+      
+         
+        }
+        else if (numDes == 4){
+    
+            
+    
+            let valeurDes = 4;
+            return valeurDes;
+        
+          
+        }
+        else if (numDes == 5){
+            
+           
+    
+            let valeurDes = 5;
+            return valeurDes;
+        
+        
+        }
+        else{
+           
+           
+             let valeurDes = 6;
+             return valeurDes;
+           
+            
+        }
+       
+       
+    }
+    compt = 0;
+
+function compteur(compt, numeroDes){
+    
+    let a = compt;
+    let b = numeroDes;
+    
+    a = a + b;
+    console.log(b)
+    console.log(a);
+    
+    
+    
+}
+
 });
+
+
 
 
 
