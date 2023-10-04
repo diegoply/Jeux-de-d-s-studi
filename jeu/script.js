@@ -78,7 +78,7 @@ function choixNumDés(){
 
 }
 
-let compt = 0;;
+let compt = 0;
 
 function compteur(valeurDes){
     
