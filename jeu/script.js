@@ -2,7 +2,7 @@
 
 
 
-//Choix numéro Dés//
+//Choix numéro Dés// 
 function choixNumDés(){
 
     let numDés = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
