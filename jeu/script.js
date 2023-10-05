@@ -1,9 +1,15 @@
+$(document).ready(function(){
+    let compt = 0;
+
+
 $('#lancerDés').on('click',function(){
    
-    var numDes = Math.floor(Math.random() *6) +1;
+    let numDes = Math.floor(Math.random() *6) +1;
 
     choixNumDés(numDes)
-    compteur(compt, numeroDes(numDes))
+    compt = compteur(compt, numeroDes(numDes))
+
+});
     function choixNumDés(numDes){
 
     
@@ -62,7 +68,7 @@ $('#lancerDés').on('click',function(){
         }
        
 
-    }
+    };
 
     function numeroDes(numDes){
 
@@ -70,29 +76,37 @@ $('#lancerDés').on('click',function(){
     return numDes;
        
       
-    }
+    };
 
 
-});
 
 
-let compt = 0;
 
-function compteur(compt, numeroDes){
+
+
+function compteur(compt, numDes){
     
-    let a = compt;
-    let b = numeroDes;
-    
-    a = a + b;
+   console.log("compt" + compt);
+   console.log("num" + numDes);
 
-    console.log(b)
-    console.log(a);
-    
+   let a = compt;
+   let b = numDes;
+
+   console.log("b" + b);
+    console.log("a" + a);
+
+    a =a + b;
+
+    console.log("b" + b);
+    console.log("a" + a);
+
+    return a;
     
     
 }
 
 
+});
 
 
 
