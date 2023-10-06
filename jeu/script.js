@@ -1,6 +1,6 @@
 $(document).ready(function(){
     let compt = 0;
-
+  
 
 
 $('#lancerDés').on('click',function(){
@@ -108,6 +108,10 @@ function compteur(compt, numDes){
 
     console.log("b" + b);
     console.log("a" + a);
+
+
+
+
 
     return a;
 

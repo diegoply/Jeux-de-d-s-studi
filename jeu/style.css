@@ -15,3 +15,8 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+#buttonHold{
+    width: 150px;
+    height:150px;
+}
