@@ -2,6 +2,7 @@ $(document).ready(function(){
     let compt = 0;
 
 
+
 $('#lancerDés').on('click',function(){
    
     let numDes = Math.floor(Math.random() *6) +1;
@@ -85,6 +86,14 @@ $('#lancerDés').on('click',function(){
 
 
 function compteur(compt, numDes){
+
+    if (numDes == 1){
+        compt = 0;
+        console.log(compt);
+        return compt;
+    }
+
+    else  {
     
    console.log("compt" + compt);
    console.log("num" + numDes);
@@ -101,12 +110,14 @@ function compteur(compt, numDes){
     console.log("a" + a);
 
     return a;
+
     
-    
+    };
+        
+    };
 }
 
-
-});
+)
 
 
 
