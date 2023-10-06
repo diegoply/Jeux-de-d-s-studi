@@ -23,39 +23,39 @@ $('#lancerDés').on('click',function(){
           
         
                 $('#imageDés').html(`<img src="./image/Dés 1.png">`);      
-    
+                console.log("num dé " + numDes);
         }
     
         else if  (numDes == 2){
     
            
                 $('#imageDés').html(`<img src="./image/Dés 2.png">`);
-
+                console.log("num dé " + numDes);
         }
         else if (numDes == 3){
     
            
                 $('#imageDés').html(`<img src="./image/Dés 3.png">`);
-        
+                console.log("num dé " + numDes);
     
         }
         else if (numDes == 4){
     
           
                 $('#imageDés').html(`<img src="./image/Dés 4.png">`);
-          
+                console.log("num dé " + numDes);
         }
         else if (numDes == 5){
             
             
                 $('#imageDés').html(`<img src="./image/Dés 5.png">`);
-           
+                console.log("num dé " + numDes);
         }
         else{
            
            
                 $('#imageDés').html(`<img src="./image/Dés 6.png">`);
-              
+                console.log("num dé " + numDes);
         }
        
 
