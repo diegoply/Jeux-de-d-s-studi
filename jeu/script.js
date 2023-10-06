@@ -1,5 +1,9 @@
 $(document).ready(function(){
     let compt = 0;
+    
+
+
+
 
 
 
@@ -7,8 +11,9 @@ $('#lancerDés').on('click',function(){
    
     let numDes = Math.floor(Math.random() *6) +1;
 
-    choixNumDés(numDes)
-    compt = compteur(compt, numeroDes(numDes))
+    choixNumDés(numDes);
+    compt = compteur(compt, numeroDes(numDes));
+    
 
 });
     function choixNumDés(numDes){
@@ -100,6 +105,7 @@ function compteur(compt, numDes){
 
    let a = compt;
    let b = numDes;
+   
 
    console.log("b" + b);
     console.log("a" + a);
@@ -109,12 +115,28 @@ function compteur(compt, numDes){
     console.log("b" + b);
     console.log("a" + a);
 
-    return a;
-
-    
-    };
         
+    $('#buttonHold').on('click',function compteurHold(hold, a){
+        
+        console.log("hold" + hold);
+        console.log("a" + a);
+
+        let c = hold;
+        let d = a;
+
+
+        c = c + d;
+        console.log("hold" + c);
+        return c;
+    }); 
+        compteurHold();
+        return a;
     };
+    };
+
+
+  
+
 }
 
 )
