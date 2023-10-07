@@ -1,9 +1,12 @@
 $('#buttonStart').on('click',function(){
     let compt = 0;
     let comptHold = 0;
-     comptDec = 0;
+    comptDec = 0;
+   
+     
      $('#scorePlayer1').html(0);
      $('#currentPlayer1').html(0);
+    
 
 
 
@@ -120,7 +123,7 @@ function comptDecompte (compt, comptHold){
         console.log("victoire")
     }
     else{
-        console.log("Joue encore")
+        $('#winner').html('Jeux en cours');
     }
 }
 
