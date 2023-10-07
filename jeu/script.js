@@ -116,6 +116,7 @@ function comptDecompte (compt, comptHold){
     console.log("comptDecompte " + comptDec);
 
     if(comptDec >= 100){
+        $('#winner').html('Joueur 1 Gagne');
         console.log("victoire")
     }
     else{
