@@ -1,8 +1,14 @@
 body{
    background-image: url("./image/tapis\ de\ jeu.jpg"); 
-   height: 1200px;
+
+    color: red;
    display: flex;
    
+}
+
+.newGameLargeur{
+    margin-top: 100px;
+    height: 500px;
 }
 
 #lancerDés{
@@ -10,13 +16,14 @@ body{
     height:150px;
 }
 
-#imageDés{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 #buttonHold{
     width: 150px;
     height:150px;
 }
+
+.buttonSize{
+    height: 100px;
+}
+

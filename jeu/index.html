@@ -3,14 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
+   
     <title>Document</title>
 </head>
-<body>
-    
-    <button id="lancerDés">Lancé dé</button>
-    <div id="imageDés"></div>
-    <button id="buttonHold">Hold</button>
+<body class="container  d-flex justify-content-around">
+    <div class="row newGameLargeur">
+    <header class="container">
+        <div class="row ">
+             <div class="col-12 d-flex justify-content-center">
+
+                <h1>New Game</h1>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+       <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="row">
+            <section class="col-4 ">
+                <h2>Player 1</h2>
+                <div>
+                    score
+                </div>
+                <div>
+                    Current
+                </div>
+
+            </section>
+            <section class="col-4 ">
+               
+                <div id="imageDés"  ></div>
+                <button id="lancerDés"   type="button" class="btn btn-light buttonSize mt-5 " >roll Dice</button>
+                <button id="buttonHold"  type="button" class="btn btn-light buttonSize mt-5" >Hold</button>
+           
+            </section>
+
+            <section class="col-4 ">
+                <h2>Player 2</h2>
+                <div>
+                    score
+                </div>
+                <div>
+                    Current
+                </div>
+
+            </section>
+       </div>
+    </div>
+</div>
+    </main>
+
+</div>
+
+
+
+
 
 
 
@@ -21,6 +72,7 @@
 
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

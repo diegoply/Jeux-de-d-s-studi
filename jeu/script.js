@@ -22,7 +22,8 @@ $('#lancerDés').on('click',function(){
         if (numDes == 1){
           
         
-                $('#imageDés').html(`<img src="./image/Dés 1.png">`);      
+                $('#imageDés').html(`<img src="./image/Dés 1.png">`); 
+                    
                 console.log("num dé " + numDes);
         }
     
