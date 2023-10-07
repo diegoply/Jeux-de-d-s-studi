@@ -34,9 +34,39 @@ body{
     height:150px;
     color: white;
     background-color: red;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5px;
     
+}
+
+
+#scorePlayer2{
+    width: 200px;
+    height:150px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    
+}
+
+
+#currentPlayer1{
+    width: 200px;
+    height:150px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
+#currentPlayer2{
+    width: 200px;
+    height:150px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.buttonStartGame{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
 }

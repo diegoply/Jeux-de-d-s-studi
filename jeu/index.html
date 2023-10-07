@@ -14,27 +14,28 @@
         <div class="row ">
              <div class="col-12 d-flex justify-content-center">
 
-                <h1>New Game</h1>
+                <h1 class="text-center me-5 mb_5">Dice game</h1>
+                <button id="buttonStart" type="button" class="btn btn-light buttonStartGame">start game</button>
                 
             </div>
         </div>
     </header>
 
     <main class="container">
-       <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-            <div class="row">
+       <div class="row ">
+        
+            <div class="row ">
             <section class="col-4 ">
-                <h2>Player 1</h2>
+                <h2 class="text-center me-5">Player 1</h2>
                 <div>
-                   <h3>score</h3>
-                   <div id="scorePlayer1" >
+                   <h3 class="text-center me-5">score</h3>
+                   <div id="scorePlayer1" class=" d-flex align-items-center justify-content-center fs-1 ms-4" >
 
                    </div>
                 </div>
                 <div>
-                    <h3>Current</h3>
-                    <div id="currentPlayer1">
+                    <h3 class="text-center me-5">Current</h3>
+                    <div id="currentPlayer1" class=" d-flex align-items-center justify-content-center fs-1 ms-4">
 
                     </div>
                 </div>
@@ -42,25 +43,31 @@
             </section>
             <section class="col-4 ">
                
-                <div id="imageDés" class="img-fluid"  ></div>
-                <button id="lancerDés"   type="button" class="btn btn-light buttonSize mt-5 " >roll Dice</button>
-                <button id="buttonHold"  type="button" class="btn btn-light buttonSize mt-5" >Hold</button>
+                <div id="imageDés" class=" d-flex align-items-center justify-content-center me-5"  ></div>
+                <button id="lancerDés"   type="button" class="btn btn-light buttonSize mt-5 d-flex align-items-center justify-content-center ms-4" >roll Dice</button>
+                <button id="buttonHold"  type="button" class="btn btn-light buttonSize mt-5 d-flex align-items-center justify-content-center ms-4" >Hold</button>
            
             </section>
 
             <section class="col-4 ">
-                <h2>Player 2</h2>
+                <h2 class="text-center me-5">Player 2</h2>
                 <div>
-                    score
+                   <h3 class="text-center me-5 ">score</h3>
+                   <div id="scorePlayer2" class=" d-flex align-items-center justify-content-center fs-1 ms-4" >
+
+                   </div>
                 </div>
                 <div>
-                    Current
+                    <h3 class="text-center  me-5">Current</h3>
+                    <div id="currentPlayer2" class=" d-flex align-items-center justify-content-center fs-1 ms-4">
+
+                    </div>
                 </div>
 
             </section>
        </div>
     </div>
-</div>
+
     </main>
 
 </div>
