@@ -11,19 +11,17 @@ body{
     height: 500px;
 }
 
-#lancerDés{
-    width: 150px;
-    height:150px;
-}
+
 
 
 
 #buttonHold{
-    width: 150px;
+    width: 200px;
     height:150px;
 }
 
-.buttonSize{
-    height: 100px;
+#lancerDés{
+    width: 200px;
+    height:150px;
 }
 

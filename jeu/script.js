@@ -81,7 +81,7 @@ function compteur(compt, numDes){
         compt = compt + numDes;
      
         
-    
+        $('#scorePlayer1').html(compt);
         console.log("compteur " + compt)
         return compt;
     
@@ -94,6 +94,7 @@ function compteur(compt, numDes){
         comptHold = comptHold + compt;
 
         console.log("compteurHold " + comptHold);
+        $('#currentPlayer1').html(comptHold);
 
         return comptHold;
     });

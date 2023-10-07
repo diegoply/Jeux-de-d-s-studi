@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
    
-    <title>Document</title>
+    <title>Jeu de dé</title>
 </head>
 <body class="container  d-flex justify-content-around">
     <div class="row newGameLargeur">
@@ -27,16 +27,22 @@
             <section class="col-4 ">
                 <h2>Player 1</h2>
                 <div>
-                    score
+                   <h3>score</h3>
+                   <div id="scorePlayer1">
+
+                   </div>
                 </div>
                 <div>
-                    Current
+                    <h3>Current</h3>
+                    <div id="currentPlayer1">
+
+                    </div>
                 </div>
 
             </section>
             <section class="col-4 ">
                
-                <div id="imageDés"  ></div>
+                <div id="imageDés" class="img-fluid"  ></div>
                 <button id="lancerDés"   type="button" class="btn btn-light buttonSize mt-5 " >roll Dice</button>
                 <button id="buttonHold"  type="button" class="btn btn-light buttonSize mt-5" >Hold</button>
            
