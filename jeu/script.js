@@ -1,7 +1,12 @@
-$(document).ready(function(){
+$('#buttonStart').on('click',function(){
     let compt = 0;
     let comptHold = 0;
-    
+     comptDec = 0;
+     $('#scorePlayer1').html(0);
+     $('#currentPlayer1').html(0);
+
+     
+
 
 
 $('#lancerDés').on('click',function(){
@@ -103,8 +108,8 @@ function compteur(compt, numDes){
 
 
 });
-
 let comptDec = 0;
+
 
 function comptDecompte (compt, comptHold){
     comptDec = comptHold + compt;
