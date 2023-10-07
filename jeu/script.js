@@ -5,7 +5,7 @@ $('#buttonStart').on('click',function(){
      $('#scorePlayer1').html(0);
      $('#currentPlayer1').html(0);
 
-     
+
 
 
 
@@ -27,8 +27,8 @@ $('#lancerDés').on('click',function(){
         if (numDes == 1){
           
         
-                $('#imageDés').html(`<img src="./image/Dés 1.png">`); 
-                    
+                $('#imageDés').html(`<img src="./image/Dés 1.png" >`); 
+                     
                 console.log("num dé " + numDes);
         }
     
