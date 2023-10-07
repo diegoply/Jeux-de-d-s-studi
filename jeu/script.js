@@ -103,7 +103,7 @@ function compteur(compt, numDes){
 
         console.log("compteurHold " + comptHold);
         $('#currentPlayer1').html(comptHold);
-
+        compt = 0;
         return comptHold;
     });
 
