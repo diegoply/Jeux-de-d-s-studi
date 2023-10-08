@@ -13,15 +13,17 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = true;
-    choixJoueur();
+    let joueur = true;
+    choixJoueur(joueur);
 
-    function choixJoueur(){
+    function choixJoueur(joueur){
 
     if(joueur === true){
+        console.log("joueur1")
         player1();
     }
     else{
+        console.log("joueur2")
         player2();
     }
     }
@@ -92,9 +94,9 @@ $('#buttonStart').on('click', function () {
 
             if (numDes === 1) {
                 compt = 0;
-
+                joueur = false;
                 console.log(compt);
-                return compt;
+                return compt , joueur;
             }
 
             else {
@@ -120,7 +122,8 @@ $('#buttonStart').on('click', function () {
             console.log("compteurHold " + comptHold);
             $('#currentPlayer2').html(comptHold);
             compt = 0;
-            return comptHold;
+            joueur = false;
+            return comptHold , joueur;
         });
 
     
@@ -218,9 +221,9 @@ function player2() {
 
         if (numDes2 === 1) {
             compt2 = 0;
-
+            joueur = true;
             console.log(compt2);
-            return compt2;
+            return compt2 , joueur;
         }
 
         else {
@@ -246,7 +249,8 @@ function player2() {
         console.log("compteurHold " + comptHold2);
         $('#currentPlayer1').html(comptHold2);
         compt2 = 0;
-        return comptHold2;
+        joueur = true;
+        return comptHold2 , joueur;
     });
 
 
@@ -268,7 +272,8 @@ function player2() {
         else {
             $('#winner').html('Jeux en cours');
         }
-    }
+    };
 
 };
-});
+
+
