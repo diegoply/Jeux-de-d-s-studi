@@ -1,11 +1,24 @@
+player1()
+
+
+function player1(){
+
+
 $('#buttonStart').on('click',function(){
     let compt = 0;
+    let compt2 = 0;
     let comptHold = 0;
+    let comptHold2 = 0;
     comptDec = 0;
+    comptDec2 = 0;
+
+    player = true;
    
      
      $('#scorePlayer1').html(0);
+       $('#scorePlayer2').html(0);
      $('#currentPlayer1').html(0);
+     $('#currentPlayer2').html(0);
     
 
 
@@ -127,7 +140,7 @@ function comptDecompte (compt, comptHold){
     }
 }
 
-
+}
 
 
 
