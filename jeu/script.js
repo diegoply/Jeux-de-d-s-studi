@@ -97,7 +97,7 @@ $('#buttonStart').on('click', function () {
                 compt = 0;
                 joueur = false;
                 console.log(compt);
-                return compt , joueur;
+                return compt;
             }
 
             else {
@@ -124,7 +124,7 @@ $('#buttonStart').on('click', function () {
             $('#currentPlayer2').html(comptHold);
             compt = 0;
             joueur = false;
-            return comptHold , joueur;
+            return comptHold;
         });
 
     
@@ -233,7 +233,7 @@ function player2() {
             compt2 = 0;
             joueur = true;
             console.log(compt2);
-            return compt2 , joueur;
+            return compt2;
         }
 
         else {
@@ -260,7 +260,7 @@ function player2() {
         $('#currentPlayer1').html(comptHold2);
         compt2 = 0;
         joueur = true;
-        return comptHold2 , joueur;
+        return comptHold2;
     });
 
 
