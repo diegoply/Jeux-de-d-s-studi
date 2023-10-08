@@ -1,12 +1,12 @@
 $('#buttonStart').on('click',function(){
-    var compt = 0;
-    var compt2 = 0;
-    var comptHold = 0;
-    var comptHold2 = 0;
+    let compt = 0;
+    let compt2 = 0;
+    let comptHold = 0;
+    let comptHold2 = 0;
     comptDec = 0;
     comptDec2 = 0;
 
-    let player = true;
+    var player = true;
    
      
      $('#scorePlayer1').html(0);
@@ -14,13 +14,12 @@ $('#buttonStart').on('click',function(){
      $('#currentPlayer1').html(0);
      $('#currentPlayer2').html(0);
 
-     choixPlayer();
+     
 });
-
 function choixPlayer(player){
 
 
-    if (player === true){
+    if (player == true){
         player1();
     }
     else{
@@ -28,16 +27,10 @@ function choixPlayer(player){
     }
 }
 
-
-
-
-
-
-    
-
-
      function player1(){
 
+        
+        
 
 $('#lancerDés').on('click',function(){
    
@@ -161,7 +154,7 @@ function comptDecompte (compt, comptHold){
 
 function player2(){
  
-    
+  
     
     $('#lancerDés').on('click',function(){
        
@@ -263,7 +256,7 @@ function player2(){
         
     
     
-    };
+    });
     let comptDec2 = 0;
     
     
