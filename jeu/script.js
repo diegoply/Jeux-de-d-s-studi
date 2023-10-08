@@ -13,7 +13,7 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = true;
+    let joueur = true;
     choixJoueur(joueur);
 
     function choixJoueur(joueur){
