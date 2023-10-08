@@ -1,4 +1,6 @@
 $('#buttonStart').on('click', function () {
+
+    let joueur = new Boolean(true);
     let compt = 0;
     let comptHold = 0;
     comptDec = 0;
@@ -13,12 +15,12 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = new Boolean(true);
+    
     choixJoueur(joueur);
 
     function choixJoueur(joueur){
 
-    if(joueur === true){
+    if(joueur ===  true){
         console.log("joueur1")
         player1();
     }
@@ -96,7 +98,7 @@ $('#buttonStart').on('click', function () {
                 compt = 0;
                 joueur = false;
                 console.log(compt);
-                return compt , joueur;
+                return compt;
             }
 
             else {
@@ -123,7 +125,7 @@ $('#buttonStart').on('click', function () {
             $('#currentPlayer2').html(comptHold);
             compt = 0;
             joueur = false;
-            return comptHold , joueur;
+            return comptHold;
         });
 
     
@@ -146,6 +148,7 @@ $('#buttonStart').on('click', function () {
                 $('#winner').html('Jeux en cours');
             }
         }
+       
 
     };
 
@@ -223,7 +226,7 @@ function player2() {
             compt2 = 0;
             joueur = true;
             console.log(compt2);
-            return compt2 , joueur;
+            return compt2;
         }
 
         else {
@@ -250,7 +253,7 @@ function player2() {
         $('#currentPlayer1').html(comptHold2);
         compt2 = 0;
         joueur = true;
-        return comptHold2 , joueur;
+        return comptHold2;
     });
 
 
