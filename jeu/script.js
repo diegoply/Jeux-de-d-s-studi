@@ -13,7 +13,7 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = new Boolean(true);
+    var joueur = true;
     choixJoueur(joueur);
 
     function choixJoueur(joueur){
@@ -37,6 +37,7 @@ $('#buttonStart').on('click', function () {
             choixNumDés(numDes);
             compt = compteur(compt, numDes);
             comptDecompte(compt, comptHold);
+            selectPlayer(joueur);
 
 
         });
@@ -146,7 +147,15 @@ $('#buttonStart').on('click', function () {
                 $('#winner').html('Jeux en cours');
             }
         }
-
+        function selectPlayer(joueur){
+            if (numDes === 1){
+             joueur = false;
+             return joueur;
+           }
+           else{
+            joueur = true;
+            return joueur;
+           }
     };
 
 
@@ -164,6 +173,7 @@ function player2() {
         choixNumDés2(numDes2);
         compt2 = compteur2(compt2, numDes2);
         comptDecompte2(compt2, comptHold2);
+        selectPlayer2(joueur);
 
 
     });
@@ -274,7 +284,18 @@ function player2() {
         }
     
 }
+        function selectPlayer2(joueur){
+            if (numDes === 1){
+            joueur = true;
+            return joueur;
+        }
+            else{
+            joueur = false;
+            return joueur;
+        }};
+    
 };
 
-});
-
+};
+}
+);
