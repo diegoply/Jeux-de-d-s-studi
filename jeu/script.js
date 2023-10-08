@@ -147,7 +147,7 @@ $('#buttonStart').on('click', function () {
                 $('#winner').html('Jeux en cours');
             }
         }
-        function selectPlayer(joueur){
+        function selectPlayer(numDes){
             if (numDes === 1){
              joueur = false;
              return joueur;
@@ -284,8 +284,8 @@ function player2() {
         }
     
 }
-        function selectPlayer2(joueur){
-            if (numDes === 1){
+        function selectPlayer2(numDes2){
+            if (numDes2 === 1){
             joueur = true;
             return joueur;
         }
