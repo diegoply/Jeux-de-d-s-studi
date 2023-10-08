@@ -13,7 +13,7 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    let joueur = true;
+    var joueur = new Boolean(true);
     choixJoueur(joueur);
 
     function choixJoueur(joueur){
@@ -148,7 +148,7 @@ $('#buttonStart').on('click', function () {
         }
 
     };
-});
+
 
 
 //debut player2//
@@ -272,8 +272,9 @@ function player2() {
         else {
             $('#winner').html('Jeux en cours');
         }
-    };
-
+    
+}
 };
 
+});
 
