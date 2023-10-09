@@ -1,4 +1,6 @@
-$('#buttonStart').on('click', function () {
+$('#buttonStart').on('click', function debutPartie() {
+
+    //ddclaration variable//
     let compt = 0;
     let comptHold = 0;
     comptDec = 0;
@@ -13,9 +15,13 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = Boolean(true);
-    choixJoueur(joueur);
 
+    choixJoueur(joueur);
+    var joueur = Boolean(true);
+    
+
+
+    //choix du joueur//
     function choixJoueur(joueur){
 
     switch (joueur){
@@ -101,7 +107,7 @@ $('#buttonStart').on('click', function () {
 
             if (numDes === 1) {
                 compt = 0;
-                joueur = false;
+          
                 console.log(compt);
                 return compt;
             }
@@ -129,7 +135,7 @@ $('#buttonStart').on('click', function () {
             console.log("compteurHold " + comptHold);
             $('#currentPlayer1').html(comptHold);
             compt = 0;
-            joueur = false;
+            
             return comptHold;
         });
 
@@ -157,13 +163,13 @@ $('#buttonStart').on('click', function () {
         function selectPlayer(numDes){
             if (numDes === 1){
              joueur = Boolean (false);
-             
+             return joueur;
            }
            else{
             joueur = Boolean(true);
-           
+            return joueur;
            }
-           return joueur;
+         
         }; 
         return joueur;
     };
@@ -294,13 +300,13 @@ $('#buttonStart').on('click', function () {
         function selectPlayer2(numDes2){
             if (numDes2 === 1){
              joueur = Boolean(true);
-            
+                return joueur;
            }
            else{
             joueur = Boolean(false);
-            
+                return joueur;
            }
-           return joueur;
+           
         }; 
         return joueur;
     };
