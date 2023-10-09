@@ -13,25 +13,20 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = Boolean(true);
-    choixJoueur(joueur);
+    let joueur = Boolean(true);
+    let gamePlayer = Boolean(true);
+    choixJoueur(gamePlayer);
 
-    function choixJoueur(joueur){
+    function choixJoueur(gamePlayer){
 
-    switch (joueur){
-        case true:
+        if(gamePlayer === true){
             console.log("joueur1");
-            player1(joueur);
-            break;
-
-        case false:
+            player1();
+        }
+        else{
             console.log("joueur2");
-            player2(joueur);
-            break;
-        default:
-            console.log("error");
-    }
-
+            player2();
+        }
     }
     function player1() {
 
@@ -101,7 +96,7 @@ $('#buttonStart').on('click', function () {
 
             if (numDes === 1) {
                 compt = 0;
-                joueur = false;
+             
                 console.log(compt);
                 return compt;
             }
@@ -129,7 +124,7 @@ $('#buttonStart').on('click', function () {
             console.log("compteurHold " + comptHold);
             $('#currentPlayer1').html(comptHold);
             compt = 0;
-            joueur = false;
+            
             return comptHold;
         });
 
@@ -165,7 +160,8 @@ $('#buttonStart').on('click', function () {
            }
            return joueur;
         }; 
-        return joueur;
+        gamePlayer = joueur;
+        return gamePlayer;
     };
     
 
@@ -302,7 +298,8 @@ $('#buttonStart').on('click', function () {
            }
            return joueur;
         }; 
-        return joueur;
+        gamePlayer = joueur;
+        return gamePlayer;
     };
    
     
