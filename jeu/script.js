@@ -26,6 +26,7 @@ $('#buttonStart').on('click', function () {
         console.log("joueur2")
         player2();
     }
+
     }
     function player1() {
 
@@ -108,12 +109,12 @@ $('#buttonStart').on('click', function () {
                 compt = compt + numDes;
 
 
-                $('#scorePlayer2').html(compt);
+                $('#scorePlayer1').html(compt);
                 console.log("compteur " + compt);
                 return compt;
 
             };
-        };
+        }
 
 
         $('#buttonHold').on('click', function () {
@@ -121,7 +122,7 @@ $('#buttonStart').on('click', function () {
             comptHold = comptHold + compt;
 
             console.log("compteurHold " + comptHold);
-            $('#currentPlayer2').html(comptHold);
+            $('#currentPlayer1').html(comptHold);
             compt = 0;
             joueur = false;
             return comptHold;
@@ -156,111 +157,143 @@ $('#buttonStart').on('click', function () {
             joueur = true;
             return joueur;
            }
+        }; 
     };
 
+    //debut player2
+
+    function player2() {
 
 
-//debut player2//
+        $('#lancerDés').on('click', function () {
+
+            let numDes2 = Math.floor(Math.random() * 6) + 1;
+
+            choixNumDés2(numDes2);
+            compt2 = compteur2(compt2, numDes2);
+            comptDecompte2(compt2, comptHold2);
+            selectPlayer2(joueur);
 
 
-function player2() {
-
-
-    $('#lancerDés').on('click', function () {
-
-        let numDes2 = Math.floor(Math.random() * 6) + 1;
-
-        choixNumDés2(numDes2);
-        compt2 = compteur2(compt2, numDes2);
-        comptDecompte2(compt2, comptHold2);
-        selectPlayer2(joueur);
-
-
-    });
-    function choixNumDés2(numDes2) {
+        });
+        function choixNumDés2(numDes2) {
 
 
 
 
-        if (numDes2 == 1) {
+            if (numDes2 == 1) {
 
 
-            $('#imageDés').html(`<img src="./image/Dés 1.png" >`);
+                $('#imageDés').html(`<img src="./image/Dés 1.png" >`);
 
-            console.log("num dé " + numDes2);
-        }
+                console.log("num dé " + numDes2);
+            }
 
-        else if (numDes2 == 2) {
-
-
-            $('#imageDés').html(`<img src="./image/Dés 2.png">`);
-            console.log("num dé " + numDes2);
-        }
-        else if (numDes2 == 3) {
+            else if (numDes2 == 2) {
 
 
-            $('#imageDés').html(`<img src="./image/Dés 3.png">`);
-            console.log("num dé " + numDes2);
-
-        }
-        else if (numDes2 == 4) {
-
-
-            $('#imageDés').html(`<img src="./image/Dés 4.png">`);
-            console.log("num dé " + numDes2);
-        }
-        else if (numDes2 == 5) {
+                $('#imageDés').html(`<img src="./image/Dés 2.png">`);
+                console.log("num dé " + numDes2);
+            }
+            else if (numDes2 == 3) {
 
 
-            $('#imageDés').html(`<img src="./image/Dés 5.png">`);
-            console.log("num dé " + numDes2);
-        }
-        else {
+                $('#imageDés').html(`<img src="./image/Dés 3.png">`);
+                console.log("num dé " + numDes2);
+
+            }
+            else if (numDes2 == 4) {
 
 
-            $('#imageDés').html(`<img src="./image/Dés 6.png">`);
-            console.log("num dé " + numDes2);
-        }
+                $('#imageDés').html(`<img src="./image/Dés 4.png">`);
+                console.log("num dé " + numDes2);
+            }
+            else if (numDes2 == 5) {
 
 
-    };
+                $('#imageDés').html(`<img src="./image/Dés 5.png">`);
+                console.log("num dé " + numDes2);
+            }
+            else {
 
 
+                $('#imageDés').html(`<img src="./image/Dés 6.png">`);
+                console.log("num dé " + numDes2);
+            }
 
-    function compteur2(compt2, numDes2) {
-
-        if (numDes2 === 1) {
-            compt2 = 0;
-            joueur = true;
-            console.log(compt2);
-            return compt2;
-        }
-
-        else {
-
-            console.log("compt" + compt2);
-            console.log("num" + numDes2);
-
-            compt2 = compt2 + numDes2;
-
-
-            $('#scorePlayer1').html(compt2);
-            console.log("compteur " + compt2);
-            return compt2;
 
         };
+
+
+
+        function compteur2(compt2, numDes2) {
+
+            if (numDes2 === 1) {
+                compt2 = 0;
+           
+                console.log(compt2);
+                return compt2;
+            }
+
+            else {
+
+                console.log("compt" + compt2);
+                console.log("num" + numDes2);
+
+                compt2 = compt2 + numDes2;
+
+
+                $('#scorePlayer2').html(compt2);
+                console.log("compteur " + compt2);
+                return compt2;
+
+            };
+        }
+
+
+        $('#buttonHold').on('click', function () {
+
+            comptHold2 = comptHold2 + compt2;
+
+            console.log("compteurHold " + comptHold2);
+            $('#currentPlayer2').html(comptHold2);
+            compt2 = 0;
+          
+            return comptHold2;
+        });
+
+    
+
+
+
+
+        let comptDec2 = 0;
+
+
+        function comptDecompte2(compt2, comptHold2) {
+            comptDec2 = comptHold2 + compt2;
+            console.log("comptDecompte " + comptDec2);
+
+            if (comptDec2 >= 100) {
+                $('#winner').html('Joueur 2 Gagne');
+                console.log("victoire");
+            }
+            else {
+                $('#winner').html('Jeux en cours');
+            }
+        }
+        function selectPlayer2(numDes2){
+            if (numDes2 === 1){
+             joueur = false;
+             return joueur;
+           }
+           else{
+            joueur = true;
+            return joueur;
+           }
+        }; 
     };
-
-
-    $('#buttonHold').on('click', function () {
-
-        comptHold2 = comptHold2 + compt2;
-
-        console.log("compteurHold " + comptHold2);
-        $('#currentPlayer1').html(comptHold2);
-        compt2 = 0;
-        joueur = true;
-        return comptHold2;
+    
     });
 
 
@@ -268,34 +301,4 @@ function player2() {
 
 
 
-    let comptDec2 = 0;
 
-
-    function comptDecompte2(compt2, comptHold2) {
-        comptDec2 = comptHold2 + compt2;
-        console.log("comptDecompte " + comptDec2);
-
-        if (comptDec2 >= 100) {
-            $('#winner').html('Joueur 1 Gagne');
-            console.log("victoire");
-        }
-        else {
-            $('#winner').html('Jeux en cours');
-        }
-    
-}
-        function selectPlayer2(numDes2){
-            if (numDes2 === 1){
-            joueur = true;
-            return joueur;
-        }
-            else{
-            joueur = false;
-            return joueur;
-        }};
-    
-};
-
-};
-}
-);
