@@ -13,27 +13,24 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = Boolean(true);
-    choixJoueur(joueur);
+    let choixJ = true;
+    let joueur = true;
+    choixJoueur(choixJ);
 
-    function choixJoueur(joueur){
+    function choixJoueur(choixJ){
 
-    switch (joueur){
-        case true:
-            console.log("joueur1");
-            player1(joueur);
-            break;
-
-        case false:
-            console.log("joueur2");
-            player2(joueur);
-            break;
-        default:
-            console.log("error");
+    if(choixJ === true){
+        console.log("joueur1");
+        player1(choixJ);
     }
+    else{
+        console.log("joueur2");
+        player2(choixJ);
+    }
+    
 
     }
-    function player1() {
+    function player1(choixJ) {
 
 
         $('#lancerDés').on('click', function () {
@@ -100,8 +97,7 @@ $('#buttonStart').on('click', function () {
         function compteur(compt, numDes) {
 
             if (numDes === 1) {
-                compt = 0;
-                joueur = false;
+                compt = 0;            
                 console.log(compt);
                 return compt;
             }
@@ -128,8 +124,7 @@ $('#buttonStart').on('click', function () {
 
             console.log("compteurHold " + comptHold);
             $('#currentPlayer1').html(comptHold);
-            compt = 0;
-            joueur = false;
+            compt = 0; 
             return comptHold;
         });
 
@@ -156,22 +151,23 @@ $('#buttonStart').on('click', function () {
 
         function selectPlayer(numDes){
             if (numDes === 1){
-             joueur = Boolean (false);
+             joueur = false;
              
            }
            else{
-            joueur = Boolean(true);
+            joueur = true;
            
            }
-           return joueur;
+           
         }; 
         return joueur;
     };
-    
+        choixJ = joueur;
+        return choixJ;
 
     //debut player2
 
-    function player2() {
+    function player2(choixJ) {
 
 
         $('#lancerDés').on('click', function () {
@@ -293,16 +289,17 @@ $('#buttonStart').on('click', function () {
         }
         function selectPlayer2(numDes2){
             if (numDes2 === 1){
-             joueur = Boolean(true);
+             joueur = true;
             
            }
            else{
-            joueur = Boolean(false);
+            joueur = false;
             
            }
            return joueur;
         }; 
-        return joueur;
+            choixJ = joueur;
+            return choixJ;
     };
    
     
