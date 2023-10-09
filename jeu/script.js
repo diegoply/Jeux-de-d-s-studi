@@ -13,7 +13,7 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    let joueur = Boolean(true);
+   
     let gamePlayer = Boolean(true);
     choixJoueur(gamePlayer);
 
@@ -27,6 +27,7 @@ $('#buttonStart').on('click', function () {
             console.log("joueur2");
             player2();
         }
+        return gamePlayer;
     }
     function player1() {
 
@@ -35,13 +36,15 @@ $('#buttonStart').on('click', function () {
 
             let numDes = Math.floor(Math.random() * 6) + 1;
 
+            
             choixNumDés(numDes);
             compt = compteur(compt, numDes);
             comptDecompte(compt, comptHold);
-            selectPlayer(joueur);
+            selectPlayer(gamePlayer);
+            
 
 
-        });
+        
         function choixNumDés(numDes) {
 
 
@@ -150,18 +153,18 @@ $('#buttonStart').on('click', function () {
         }
 
         function selectPlayer(numDes){
+            console.log("valeur Dé" + numDes)
             if (numDes === 1){
-             joueur = Boolean (false);
+             gamePlayer = Boolean (false);
              
            }
            else{
-            joueur = Boolean(true);
+            gamePlayer = Boolean(true);
            
            }
-           return joueur;
+           return gamePlayer;
         }; 
-        gamePlayer = joueur;
-        return gamePlayer;
+    });
     };
     
 
@@ -174,13 +177,15 @@ $('#buttonStart').on('click', function () {
 
             let numDes2 = Math.floor(Math.random() * 6) + 1;
 
+         
             choixNumDés2(numDes2);
             compt2 = compteur2(compt2, numDes2);
             comptDecompte2(compt2, comptHold2);
-            selectPlayer2(joueur);
+            selectPlayer2(gamePlayer);
+            
 
 
-        });
+        
         function choixNumDés2(numDes2) {
 
 
@@ -288,18 +293,18 @@ $('#buttonStart').on('click', function () {
             }
         }
         function selectPlayer2(numDes2){
+        
             if (numDes2 === 1){
-             joueur = Boolean(true);
+             gamePlayer = Boolean(true);
             
            }
            else{
-            joueur = Boolean(false);
+            gamePlayer = Boolean(false);
             
            }
-           return joueur;
+           return gamePlayer;
         }; 
-        gamePlayer = joueur;
-        return gamePlayer;
+    });
     };
    
     
