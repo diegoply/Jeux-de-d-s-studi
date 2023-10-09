@@ -13,18 +13,23 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    let joueur = true;
+    var joueur = Boolean(true);
     choixJoueur(joueur);
 
     function choixJoueur(joueur){
 
-    if(joueur === true){
-        console.log("joueur1")
-        player1();
-    }
-    else{
-        console.log("joueur2")
-        player2();
+    switch (joueur){
+        case true:
+            console.log("joueur1");
+            player1(joueur);
+            break;
+
+        case false:
+            console.log("joueur2");
+            player2(joueur);
+            break;
+        default:
+            console.log("error");
     }
 
     }
@@ -148,18 +153,21 @@ $('#buttonStart').on('click', function () {
                 $('#winner').html('Jeux en cours');
             }
         }
+
         function selectPlayer(numDes){
             if (numDes === 1){
-             joueur = false;
-             return joueur;
+             joueur = Boolean (false);
+             
            }
            else{
-            joueur = true;
-            return joueur;
+            joueur = Boolean(true);
+           
            }
+           return joueur;
         }; 
         return joueur;
     };
+    
 
     //debut player2
 
@@ -285,16 +293,18 @@ $('#buttonStart').on('click', function () {
         }
         function selectPlayer2(numDes2){
             if (numDes2 === 1){
-             joueur = false;
-             return joueur;
+             joueur = Boolean(true);
+            
            }
            else{
-            joueur = true;
-            return joueur;
+            joueur = Boolean(false);
+            
            }
+           return joueur;
         }; 
         return joueur;
     };
+   
     
     });
 
