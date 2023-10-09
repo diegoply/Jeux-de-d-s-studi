@@ -87,7 +87,7 @@ $('#buttonStart').on('click', function () {
                 console.log("num dé " + numDes);
             }
 
-
+            
         };
 
 
@@ -158,6 +158,7 @@ $('#buttonStart').on('click', function () {
             return joueur;
            }
         }; 
+        return joueur;
     };
 
     //debut player2
@@ -292,6 +293,7 @@ $('#buttonStart').on('click', function () {
             return joueur;
            }
         }; 
+        return joueur;
     };
     
     });
