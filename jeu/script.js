@@ -13,26 +13,13 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    var joueur = Boolean(true);
-    choixJoueur(joueur);
+   
+ player1();
 
-    function choixJoueur(joueur){
 
-    switch (joueur){
-        case true:
-            console.log("joueur1");
-            player1(joueur);
-            break;
+   
 
-        case false:
-            console.log("joueur2");
-            player2(joueur);
-            break;
-        default:
-            console.log("error");
-    }
-
-    }
+    
     function player1() {
 
 
@@ -43,7 +30,7 @@ $('#buttonStart').on('click', function () {
             choixNumDés(numDes);
             compt = compteur(compt, numDes);
             comptDecompte(compt, comptHold);
-            selectPlayer(joueur);
+       
 
 
         });
@@ -101,7 +88,7 @@ $('#buttonStart').on('click', function () {
 
             if (numDes === 1) {
                 compt = 0;
-                joueur = false;
+             
                 console.log(compt);
                 return compt;
             }
@@ -129,7 +116,7 @@ $('#buttonStart').on('click', function () {
             console.log("compteurHold " + comptHold);
             $('#currentPlayer1').html(comptHold);
             compt = 0;
-            joueur = false;
+            
             return comptHold;
         });
 
@@ -154,18 +141,7 @@ $('#buttonStart').on('click', function () {
             }
         }
 
-        function selectPlayer(numDes){
-            if (numDes === 1){
-             joueur = Boolean (false);
-             
-           }
-           else{
-            joueur = Boolean(true);
-           
-           }
-           return joueur;
-        }; 
-        return joueur;
+      
     };
     
 
@@ -181,7 +157,7 @@ $('#buttonStart').on('click', function () {
             choixNumDés2(numDes2);
             compt2 = compteur2(compt2, numDes2);
             comptDecompte2(compt2, comptHold2);
-            selectPlayer2(joueur);
+            
 
 
         });
@@ -291,20 +267,8 @@ $('#buttonStart').on('click', function () {
                 $('#winner').html('Jeux en cours');
             }
         }
-        function selectPlayer2(numDes2){
-            if (numDes2 === 1){
-             joueur = Boolean(true);
-            
-           }
-           else{
-            joueur = Boolean(false);
-            
-           }
-           return joueur;
-        }; 
-        return joueur;
+     
     };
-   
     
     });
 
