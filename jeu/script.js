@@ -13,9 +13,10 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
+    let joueur = true;
    
- player2();
-
+ player1();
+    
 
    
 
@@ -31,14 +32,31 @@ $('#buttonStart').on('click', function () {
             choixNumDés(numDes);
             compt = compteur(compt, numDes);
             comptDecompte(compt, comptHold);
+            tourSuivant(joueur);
        
 
 
         });
 
         function tourJoueur(numDes){
-            console.log("numero dé " + numDes);
+            if( numDes === 1){
+                joueur = false;
+                return joueur;
+            }
+            else {
+                joueur = true;
+                return joueur;
+            }
         };
+
+        function tourSuivant(joueur){
+            if(joueur === false){
+                player2();
+            }
+            else{
+                player1();
+            }
+        }
 
         function choixNumDés(numDes) {
 
@@ -160,20 +178,36 @@ $('#buttonStart').on('click', function () {
 
             let numDes2 = Math.floor(Math.random() * 6) + 1;
 
-            tourJoueur(numDes2);
+            tourJoueur2(numDes2);
             choixNumDés2(numDes2);
             compt2 = compteur2(compt2, numDes2);
             comptDecompte2(compt2, comptHold2);
-            
+            tourSuivant2(joueur);
 
 
         });
 
         
-        function tourJoueur(numDes2){
-            console.log("numero dé " + numDes2);
-        };
+        function tourJoueur2(numDes2){
+            if( numDes2 === 1){
+                joueur = true;
+                return joueur;
+            }
+            else {
+                joueur = false;
+                return joueur;
+            }
+        }
 
+
+        function tourSuivant2(joueur){
+            if(joueur === true){
+                player1();
+            }
+            else{
+                player2();
+            }
+        }
         function choixNumDés2(numDes2) {
 
 
