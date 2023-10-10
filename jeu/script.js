@@ -14,10 +14,10 @@ $('#buttonStart').on('click', function () {
     $('#currentPlayer2').html(0);
 
     let joueur = true; 
-    let joueur2 = true; 
+    let joueur2 = false; 
    
- player1();
- player2();
+ 
+    player1();
     
 
    
@@ -61,9 +61,7 @@ $('#buttonStart').on('click', function () {
                 comptHold = 0;
                 
             }
-            else{
-                return;
-            }
+           
         }
 
         function choixNumDés(numDes) {
@@ -185,7 +183,7 @@ $('#buttonStart').on('click', function () {
 
         $('#lancerDés').on('click', function () {
 
-            let joueur2 = false;
+         
 
             let numDes2 = Math.floor(Math.random() * 6) + 1;
 
@@ -219,9 +217,7 @@ $('#buttonStart').on('click', function () {
                 compt2 = 0;
                 comptHold2 = 0;
             }
-            else{
-                return;
-            }
+            
         }
         function choixNumDés2(numDes2) {
 
