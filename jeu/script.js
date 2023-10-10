@@ -14,7 +14,7 @@ $('#buttonStart').on('click', function () {
     $('#currentPlayer2').html(0);
 
    
- player1();
+ player2();
 
 
    
@@ -27,6 +27,7 @@ $('#buttonStart').on('click', function () {
 
             let numDes = Math.floor(Math.random() * 6) + 1;
 
+            tourJoueur(numDes);
             choixNumDés(numDes);
             compt = compteur(compt, numDes);
             comptDecompte(compt, comptHold);
@@ -34,6 +35,11 @@ $('#buttonStart').on('click', function () {
 
 
         });
+
+        function tourJoueur(numDes){
+            console.log("numero dé " + numDes);
+        };
+
         function choixNumDés(numDes) {
 
 
@@ -154,6 +160,7 @@ $('#buttonStart').on('click', function () {
 
             let numDes2 = Math.floor(Math.random() * 6) + 1;
 
+            tourJoueur(numDes2);
             choixNumDés2(numDes2);
             compt2 = compteur2(compt2, numDes2);
             comptDecompte2(compt2, comptHold2);
@@ -161,6 +168,12 @@ $('#buttonStart').on('click', function () {
 
 
         });
+
+        
+        function tourJoueur(numDes2){
+            console.log("numero dé " + numDes2);
+        };
+
         function choixNumDés2(numDes2) {
 
 
