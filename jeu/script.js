@@ -13,7 +13,8 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    
+    let joueur = true;
+    let joueur2 = false;
    
  
     player1();
@@ -24,10 +25,15 @@ $('#buttonStart').on('click', function () {
     
     function player1() {
         
-        let joueur =  true; 
 
+
+         
+
+
+        
         $('#lancerDés').on('click', function () {
 
+            
                    
             let numDes = Math.floor(Math.random() * 6) + 1;
 
@@ -58,7 +64,7 @@ $('#buttonStart').on('click', function () {
         function tourSuivant(joueur){
             if(joueur === false){
                 player2();
-              
+                compt = 0;
             }
            
         }
@@ -172,6 +178,7 @@ $('#buttonStart').on('click', function () {
 
         
     };
+  
 
     
     
@@ -180,7 +187,7 @@ $('#buttonStart').on('click', function () {
     
     function player2() {
         
-        let joueur2 = false;
+        
 
         $('#lancerDés').on('click', function () {
             
@@ -214,8 +221,7 @@ $('#buttonStart').on('click', function () {
         function tourSuivant2(joueur2){
             if(joueur2 === true){
                 player1();
-               
-                
+                compt2 = 0;
             }
            
         }
@@ -324,9 +330,9 @@ $('#buttonStart').on('click', function () {
             else {
                 $('#winner').html('Jeux en cours');
             }
-        }
+        };
 
-   
+        
     };
     
     
