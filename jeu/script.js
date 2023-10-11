@@ -13,8 +13,7 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    let joueur = true; 
-    let joueur2 = false; 
+    
    
  
     player1();
@@ -25,10 +24,11 @@ $('#buttonStart').on('click', function () {
     
     function player1() {
         
+        let joueur =  true; 
 
         $('#lancerDés').on('click', function () {
 
-                      
+                   
             let numDes = Math.floor(Math.random() * 6) + 1;
 
             choixNumDés(numDes);
@@ -46,20 +46,19 @@ $('#buttonStart').on('click', function () {
         function tourJoueur(numDes){
             if( numDes === 1){
                 joueur = false;
-                return joueur;
+                
             }
             else {
                 joueur = true;
-                return joueur;
+               
             }
+             return joueur;
         };
 
         function tourSuivant(joueur){
             if(joueur === false){
                 player2();
-                compt = 0;
-                comptHold = 0;
-                
+              
             }
            
         }
@@ -69,7 +68,7 @@ $('#buttonStart').on('click', function () {
 
 
 
-            if (numDes == 1) {
+            if (numDes === 1) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 1.png" >`);
@@ -77,26 +76,26 @@ $('#buttonStart').on('click', function () {
                 console.log("num dé " + numDes);
             }
 
-            else if (numDes == 2) {
+            else if (numDes === 2) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 2.png">`);
                 console.log("num dé " + numDes);
             }
-            else if (numDes == 3) {
+            else if (numDes === 3) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 3.png">`);
                 console.log("num dé " + numDes);
 
             }
-            else if (numDes == 4) {
+            else if (numDes === 4) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 4.png">`);
                 console.log("num dé " + numDes);
             }
-            else if (numDes == 5) {
+            else if (numDes === 5) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 5.png">`);
@@ -171,100 +170,101 @@ $('#buttonStart').on('click', function () {
             }
         }
 
-      
+        
     };
+
+    
     
 
     //debut player2
     
     function player2() {
-
         
+        let joueur2 = false;
 
         $('#lancerDés').on('click', function () {
-
-         
-
+            
+                      
             let numDes2 = Math.floor(Math.random() * 6) + 1;
 
             choixNumDés2(numDes2);
-            
+           
             compt2 = compteur2(compt2, numDes2);
             comptDecompte2(compt2, comptHold2);
             tourJoueur2(numDes2);
             tourSuivant2(joueur2);
-           
+         
+       
 
 
         });
 
-        
         function tourJoueur2(numDes2){
             if( numDes2 === 1){
                 joueur2 = true;
-                return joueur2;
+                
             }
             else {
                 joueur2 = false;
-                return joueur2;
+               
             }
-        }
+             return joueur2;
+        };
 
-
-        function tourSuivant2(joueur){
+        function tourSuivant2(joueur2){
             if(joueur2 === true){
                 player1();
-                compt2 = 0;
-                comptHold2 = 0;
+               
+                
             }
-            
+           
         }
+
         function choixNumDés2(numDes2) {
 
 
 
 
-            if (numDes2 == 1) {
+            if (numDes2 === 1) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 1.png" >`);
 
-                console.log("num dé2 " + numDes2);
+                console.log("num dé " + numDes2);
             }
 
-            else if (numDes2 == 2) {
+            else if (numDes2 === 2) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 2.png">`);
-                console.log("num dé2 " + numDes2);
+                console.log("num dé " + numDes2);
             }
-            else if (numDes2 == 3) {
+            else if (numDes2 === 3) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 3.png">`);
-                console.log("num dé2 " + numDes2);
+                console.log("num dé " + numDes2);
 
             }
-            else if (numDes2 == 4) {
+            else if (numDes2 === 4) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 4.png">`);
-                console.log("num dé2 " + numDes2);
+                console.log("num dé " + numDes2);
             }
-            else if (numDes2 == 5) {
-
+            else if (numDes2 === 5){
 
                 $('#imageDés').html(`<img src="./image/Dés 5.png">`);
-                console.log("num dé2 " + numDes2);
+                console.log("num dé " + numDes2);
             }
             else {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 6.png">`);
-                console.log("num d2 " + numDes2);
+                console.log("num dé " + numDes2);
             }
 
-
+            
         };
 
 
@@ -273,21 +273,21 @@ $('#buttonStart').on('click', function () {
 
             if (numDes2 === 1) {
                 compt2 = 0;
-           
+             
                 console.log(compt2);
                 return compt2;
             }
 
             else {
 
-                console.log("compt2" + compt2);
-                console.log("num2" + numDes2);
+                console.log("compt" + compt2);
+                console.log("num" + numDes2);
 
                 compt2 = compt2 + numDes2;
 
 
-                $('#scorePlayer2').html(compt2);
-                console.log("compteur2 " + compt2);
+                $('#scorePlayer1').html(compt2);
+                console.log("compteur " + compt2);
                 return compt2;
 
             };
@@ -298,10 +298,10 @@ $('#buttonStart').on('click', function () {
 
             comptHold2 = comptHold2 + compt2;
 
-            console.log("compteurHold2 " + comptHold2);
-            $('#currentPlayer2').html(comptHold2);
+            console.log("compteurHold " + comptHold2);
+            $('#currentPlayer1').html(comptHold2);
             compt2 = 0;
-          
+            
             return comptHold2;
         });
 
@@ -315,18 +315,20 @@ $('#buttonStart').on('click', function () {
 
         function comptDecompte2(compt2, comptHold2) {
             comptDec2 = comptHold2 + compt2;
-            console.log("comptDecompte2 " + comptDec2);
+            console.log("comptDecompte " + comptDec2);
 
-            if (comptDec2 >= 100) {
-                $('#winner').html('Joueur 2 Gagne');
+            if (comptDec >= 100) {
+                $('#winner').html('Joueur 1 Gagne');
                 console.log("victoire");
             }
             else {
                 $('#winner').html('Jeux en cours');
             }
         }
-     
+
+   
     };
+    
     
     });
 
