@@ -8,6 +8,9 @@ $('#buttonStart').on('click', function () {
     comptDec2 = 0;
 
 
+    $('#lancerDés').off('click');
+    $('#buttonHold').off('click');
+
     $('#scorePlayer1').html(0);
     $('#currentPlayer1').html(0);
     $('#scorePlayer2').html(0);
@@ -177,7 +180,7 @@ $('#buttonStart').on('click', function () {
 
 
             $('#lancerDés').off('click');
-            $('#buttonHold').off('click')
+            $('#buttonHold').off('click');
             
         }
 
