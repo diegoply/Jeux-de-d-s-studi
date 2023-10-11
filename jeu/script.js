@@ -24,13 +24,7 @@ $('#buttonStart').on('click', function () {
 
     
     function player1() {
-        
-
-
-         
-
-
-        
+            
         $('#lancerDés').on('click', function () {
 
             
@@ -292,7 +286,7 @@ $('#buttonStart').on('click', function () {
                 compt2 = compt2 + numDes2;
 
 
-                $('#scorePlayer1').html(compt2);
+                $('#scorePlayer2').html(compt2);
                 console.log("compteur " + compt2);
                 return compt2;
 
@@ -305,7 +299,7 @@ $('#buttonStart').on('click', function () {
             comptHold2 = comptHold2 + compt2;
 
             console.log("compteurHold " + comptHold2);
-            $('#currentPlayer1').html(comptHold2);
+            $('#currentPlayer2').html(comptHold2);
             compt2 = 0;
             
             return comptHold2;
@@ -332,9 +326,8 @@ $('#buttonStart').on('click', function () {
             }
         };
 
-        
-    };
     
+    };
     
     });
 
