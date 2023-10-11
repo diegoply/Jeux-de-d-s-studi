@@ -202,7 +202,7 @@ $('#buttonStart').on('click', function () {
         function tourJoueur2(numDes2){
             if( numDes2 === 1){
                 joueur2 = true;
-                return joueu2r;
+                return joueur2;
             }
             else {
                 joueur2 = false;
