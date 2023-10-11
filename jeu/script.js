@@ -38,6 +38,7 @@ $('#buttonStart').on('click', function () {
             tourJoueur(numDes);
             tourSuivant(joueur);
          
+         
        
 
 
@@ -57,7 +58,9 @@ $('#buttonStart').on('click', function () {
 
         function tourSuivant(joueur){
             if(joueur === false){
+                evenementOff();
                 player2();
+              
                 compt = 0;
             }
            
@@ -170,6 +173,14 @@ $('#buttonStart').on('click', function () {
             }
         }
 
+        function evenementOff(){
+
+
+            $('#lancerDés').off('click');
+            $('#buttonHold').off('click')
+            
+        }
+
         
     };
   
@@ -194,6 +205,7 @@ $('#buttonStart').on('click', function () {
             comptDecompte2(compt2, comptHold2);
             tourJoueur2(numDes2);
             tourSuivant2(joueur2);
+            
          
        
 
@@ -214,7 +226,9 @@ $('#buttonStart').on('click', function () {
 
         function tourSuivant2(joueur2){
             if(joueur2 === true){
+                evenementOff2();
                 player1();
+                
                 compt2 = 0;
             }
            
@@ -326,6 +340,13 @@ $('#buttonStart').on('click', function () {
             }
         };
 
+        function evenementOff2(){
+
+
+            $('#lancerDés').off('click');
+            $('#buttonHold').off('click')
+            
+        }
     
     };
     
