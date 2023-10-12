@@ -72,8 +72,10 @@ $('#buttonStart').on('click', function () {
         function tourSuivant(joueur){
             if(joueur === false){
                 compt = 0;
+                compt2 = 0;
                 evenementOff();
                 player2();
+                $('#scorePlayer1').html(0);
                 gamer2 = true;         
                 return gamer2;
             }
@@ -255,8 +257,10 @@ $('#buttonStart').on('click', function () {
         function tourSuivant2(joueur2){
             if(joueur2 === true){
                 compt2 = 0;
+                compt = 0;
                 evenementOff2();
                 player1();
+                $('#scorePlayer2').html(0);
                 gamer1 = true;
                 return gamer1;
             }
@@ -365,8 +369,8 @@ $('#buttonStart').on('click', function () {
             comptDec2 = comptHold2 + compt2;
             console.log("comptDecompte " + comptDec2);
 
-            if (comptDec >= 100) {
-                $('#winner').html('Joueur 1 Gagne');
+            if (comptDec2 >= 100) {
+                $('#winner').html('Joueur 2 Gagne');
                 console.log("victoire");
             }
             else {
