@@ -252,7 +252,7 @@ $('#buttonStart').on('click', function () {
 
        
 
-        function tourSuivant2(joueur2,){
+        function tourSuivant2(joueur2){
             if(joueur2 === true){
                 compt2 = 0;
                 evenementOff2();
