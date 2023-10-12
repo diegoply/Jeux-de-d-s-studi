@@ -15,6 +15,10 @@ $('#buttonStart').on('click', function () {
     $('#currentPlayer1').html(0);
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
+    $('.playButton').html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+    <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+  </svg>`);
+
 
     let joueur;
     let joueur2;
@@ -32,6 +36,7 @@ $('#buttonStart').on('click', function () {
 
         gamer1 = true;
         joueur = true;
+      
             
         $('#lancerDés').on('click', function () {
 
@@ -76,7 +81,11 @@ $('#buttonStart').on('click', function () {
                 evenementOff();
                 player2();
                 $('#scorePlayer1').html(0);
-                gamer2 = true;         
+                gamer2 = true;   
+                $('.playButton2').html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+              </svg>`);
+                  
                 return gamer2;
             }
            
@@ -187,11 +196,11 @@ $('#buttonStart').on('click', function () {
             console.log("comptDecompte " + comptDec);
 
             if (comptDec >= 100) {
-                $('#winner').html('Joueur 1 Gagne');
+                $('.winner').html('Joueur 1 Gagne');
                 console.log("victoire");
             }
             else {
-                $('#winner').html('Jeux en cours');
+                $('.winner').html('Jeux en cours');
             }
         }
 
@@ -201,6 +210,7 @@ $('#buttonStart').on('click', function () {
             $('#lancerDés').off('click');
             $('.buttonHold').off('click');
             $('.buttonHold').off('click');
+            $('.playButton').html(NaN);
             
         }
 
@@ -217,6 +227,7 @@ $('#buttonStart').on('click', function () {
         
         gamer2 = true;
         joueur2 = false;
+       
 
         $('#lancerDés').on('click', function () {
             
@@ -262,6 +273,10 @@ $('#buttonStart').on('click', function () {
                 player1();
                 $('#scorePlayer2').html(0);
                 gamer1 = true;
+                $('.playButton').html(`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+                </svg>`);
+                
                 return gamer1;
             }
             
@@ -370,11 +385,11 @@ $('#buttonStart').on('click', function () {
             console.log("comptDecompte " + comptDec2);
 
             if (comptDec2 >= 100) {
-                $('#winner').html('Joueur 2 Gagne');
+                $('.winner').html('Joueur 2 Gagne');
                 console.log("victoire");
             }
             else {
-                $('#winner').html('Jeux en cours');
+                $('.winner').html('Jeux en cours');
             }
         };
 
@@ -384,6 +399,8 @@ $('#buttonStart').on('click', function () {
             $('#lancerDés').off('click');
             $('.buttonHold').off('click');
             $('.buttonHold').off('click');
+            $('.playButton2').html(NaN);
+           
             
         }
     

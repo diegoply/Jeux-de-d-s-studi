@@ -81,3 +81,10 @@ body{
 .blockWin{
     height: 150px;
 }
+
+.playButton{
+   
+    color: red;
+    text-align: center;
+}
+
