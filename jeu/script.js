@@ -16,8 +16,8 @@ $('#buttonStart').on('click', function () {
     $('#scorePlayer2').html(0);
     $('#currentPlayer2').html(0);
 
-    let joueur = true;
-    let joueur2 = false;
+    let joueur;
+    let joueur2;
    
     let gamer1;
     let gamer2;
@@ -31,10 +31,11 @@ $('#buttonStart').on('click', function () {
     function player1() {
 
         gamer1 = true;
+        joueur = true;
             
         $('#lancerDés').on('click', function () {
 
-            
+          
                    
             let numDes = Math.floor(Math.random() * 6) + 1;
 
@@ -56,6 +57,9 @@ $('#buttonStart').on('click', function () {
                 joueur = false;
                 
             }
+            else if(gamer1 === false){
+                joueur = false;
+            }
             else {
                 joueur = true;
                
@@ -64,14 +68,9 @@ $('#buttonStart').on('click', function () {
         };
 
 
-        $('.buttonHold').on('click', function gamer() {
-            console.log("button on cliquez")
-            gamer1 = false;
-            return gamer1;
-        });
 
         function tourSuivant(joueur, gamer1){
-            if(joueur === false || gamer1 === false ){
+            if(joueur === false){
                 evenementOff();
                 player2();
               
@@ -169,7 +168,12 @@ $('#buttonStart').on('click', function () {
 
        
 
-
+        
+        $('.buttonHold').on('click', function gamer() {
+            console.log("button on cliquez")
+            gamer1 = false;
+            return gamer1;
+        });
 
 
         let comptDec = 0;
@@ -208,9 +212,11 @@ $('#buttonStart').on('click', function () {
     function player2() {
         
         gamer2 = true;
+        joueur2 = false;
 
         $('#lancerDés').on('click', function () {
             
+        
                       
             let numDes2 = Math.floor(Math.random() * 6) + 1;
 
@@ -232,6 +238,9 @@ $('#buttonStart').on('click', function () {
                 joueur2 = true;
                 
             }
+            else if(gamer2 === false){
+                joueur2 = true;
+            }
             else {
                 joueur2 = false;
                
@@ -239,25 +248,16 @@ $('#buttonStart').on('click', function () {
              return joueur2;
         };
 
-        $('.buttonHold').on('click', function () {
-            console.log("button on cliquez")
-            gamer2 = false;
-            return gamer2;
-        });
+       
 
         function tourSuivant2(joueur2, gamer2){
-            if(joueur2 === true || gamer2 === false){
+            if(joueur2 === true){
                 evenementOff2();
                 player1();
                 
                 compt2 = 0;
             }
-            else if(gamer2 === false){
-                evenementOff2();
-                player1();
-
-                compt = 0;
-            }
+            
            
         }
 
@@ -347,8 +347,11 @@ $('#buttonStart').on('click', function () {
         });
 
     
-        
-       
+        $('.buttonHold').on('click', function () {
+            console.log("button on cliquez")
+            gamer2 = false;
+            return gamer2;
+        });
 
 
 
