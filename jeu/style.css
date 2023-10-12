@@ -15,7 +15,7 @@ body{
 
 
 
-#buttonHold{
+.buttonHold{
     width: 220px;
     height:150px;
     color: white;

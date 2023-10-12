@@ -24,13 +24,13 @@ $('#buttonStart').on('click', function () {
  
     player1();
     
-    gamer1 = true;
+  
    
 
     
     function player1() {
 
-        
+        gamer1 = true;
             
         $('#lancerDés').on('click', function () {
 
@@ -64,7 +64,7 @@ $('#buttonStart').on('click', function () {
         };
 
 
-        $('#buttonHold').on('click', function gamer() {
+        $('.buttonHold').on('click', function gamer() {
             console.log("button on cliquez")
             gamer1 = false;
             return gamer1;
@@ -156,7 +156,7 @@ $('#buttonStart').on('click', function () {
         }
 
 
-        $('#buttonHold').on('click', function () {
+        $('.buttonHold').on('click', function () {
 
             comptHold = comptHold + compt;
 
@@ -192,8 +192,7 @@ $('#buttonStart').on('click', function () {
 
 
             $('#lancerDés').off('click');
-            $('#buttonHold').off('click');
-            $('#buttonHold').off('click');
+            $('.buttonHold').off('click');
             
         }
 
@@ -240,7 +239,7 @@ $('#buttonStart').on('click', function () {
              return joueur2;
         };
 
-        $('#buttonHold').on('click', function gamer2() {
+        $('.buttonHold').on('click', function () {
             console.log("button on cliquez")
             gamer2 = false;
             return gamer2;
@@ -336,7 +335,7 @@ $('#buttonStart').on('click', function () {
         }
 
 
-        $('#buttonHold').on('click', function () {
+        $('.buttonHold').on('click', function () {
 
             comptHold2 = comptHold2 + compt2;
 
@@ -373,8 +372,8 @@ $('#buttonStart').on('click', function () {
 
 
             $('#lancerDés').off('click');
-            $('#buttonHold').off('click')
-            $('#buttonHold').off('click');
+            $('.buttonHold').off('click')
+            
         }
     
     };
