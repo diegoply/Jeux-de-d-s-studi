@@ -9,7 +9,7 @@ $('#buttonStart').on('click', function () {
 
 
     $('#lancerDés').off('click');
-    $('#buttonHold').off('click');
+    $('.buttonHold').off('click');
 
     $('#scorePlayer1').html(0);
     $('#currentPlayer1').html(0);
@@ -69,12 +69,13 @@ $('#buttonStart').on('click', function () {
 
 
 
-        function tourSuivant(joueur, gamer1){
+        function tourSuivant(joueur){
             if(joueur === false){
+                compt = 0;
                 evenementOff();
                 player2();
-              
-                compt = 0;
+                gamer2 = true;         
+                return gamer2;
             }
            
            
@@ -197,6 +198,7 @@ $('#buttonStart').on('click', function () {
 
             $('#lancerDés').off('click');
             $('.buttonHold').off('click');
+            $('.buttonHold').off('click');
             
         }
 
@@ -250,12 +252,13 @@ $('#buttonStart').on('click', function () {
 
        
 
-        function tourSuivant2(joueur2, gamer2){
+        function tourSuivant2(joueur2,){
             if(joueur2 === true){
+                compt2 = 0;
                 evenementOff2();
                 player1();
-                
-                compt2 = 0;
+                gamer1 = true;
+                return gamer1;
             }
             
            
@@ -375,7 +378,8 @@ $('#buttonStart').on('click', function () {
 
 
             $('#lancerDés').off('click');
-            $('.buttonHold').off('click')
+            $('.buttonHold').off('click');
+            $('.buttonHold').off('click');
             
         }
     
