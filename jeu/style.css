@@ -9,6 +9,7 @@ body{
 .newGameLargeur{
     margin-top: 100px;
     height: 500px;
+    margin-right: 340px;
 }
 
 
@@ -69,6 +70,7 @@ body{
     color: white;
     background-color: red;
     border-radius: 5px;
+  
 }
 
 .sizeImage{
@@ -80,6 +82,7 @@ body{
 
 .blockWin{
     height: 150px;
+    margin-right: 50px;
 }
 
 .playButton{
@@ -88,3 +91,6 @@ body{
     text-align: center;
 }
 
+.marginDice{
+    margin-right: 80px;
+}

@@ -110,32 +110,32 @@ $('#buttonStart').on('click', function () {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 2.png">`);
-                console.log("num dé " + numDes);
+              
             }
             else if (numDes === 3) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 3.png">`);
-                console.log("num dé " + numDes);
+              
 
             }
             else if (numDes === 4) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 4.png">`);
-                console.log("num dé " + numDes);
+             
             }
             else if (numDes === 5) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 5.png">`);
-                console.log("num dé " + numDes);
+                
             }
             else {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 6.png">`);
-                console.log("num dé " + numDes);
+              
             }
 
             
@@ -148,7 +148,7 @@ $('#buttonStart').on('click', function () {
             if (numDes === 1) {
                 compt = 0;
              
-                console.log(compt);
+            
                 return compt;
             }
 
@@ -161,7 +161,7 @@ $('#buttonStart').on('click', function () {
 
 
                 $('#scorePlayer1').html(compt);
-                console.log("compteur " + compt);
+             
                 return compt;
 
             };
@@ -172,7 +172,7 @@ $('#buttonStart').on('click', function () {
 
             comptHold = comptHold + compt;
 
-            console.log("compteurHold " + comptHold);
+        
             $('#currentPlayer1').html(comptHold);
             compt = 0;
             
@@ -183,7 +183,7 @@ $('#buttonStart').on('click', function () {
 
         
         $('.buttonHold').on('click', function gamer() {
-            console.log("button on cliquez")
+           
             gamer1 = false;
             return gamer1;
         });
@@ -194,11 +194,13 @@ $('#buttonStart').on('click', function () {
 
         function comptDecompte(compt, comptHold) {
             comptDec = comptHold + compt;
-            console.log("comptDecompte " + comptDec);
+            
 
             if (comptDec >= 100) {
                 $('.winner').html('Joueur 1 Gagne');
-                console.log("victoire");
+                let audio = new Audio('./sons/CRWDApls_Applaudissements 25 50 pers 3 (ID 0814)_LS.wav');
+                audio.play()
+             
             }
             else {
                 $('.winner').html('Jeux en cours');
@@ -294,38 +296,38 @@ $('#buttonStart').on('click', function () {
 
                 $('#imageDés').html(`<img src="./image/Dés 1.png" >`);
 
-                console.log("num dé " + numDes2);
+              
             }
 
             else if (numDes2 === 2) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 2.png">`);
-                console.log("num dé " + numDes2);
+              
             }
             else if (numDes2 === 3) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 3.png">`);
-                console.log("num dé " + numDes2);
+              
 
             }
             else if (numDes2 === 4) {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 4.png">`);
-                console.log("num dé " + numDes2);
+               
             }
             else if (numDes2 === 5){
 
                 $('#imageDés').html(`<img src="./image/Dés 5.png">`);
-                console.log("num dé " + numDes2);
+              
             }
             else {
 
 
                 $('#imageDés').html(`<img src="./image/Dés 6.png">`);
-                console.log("num dé " + numDes2);
+              
             }
 
             
@@ -338,20 +340,19 @@ $('#buttonStart').on('click', function () {
             if (numDes2 === 1) {
                 compt2 = 0;
              
-                console.log(compt2);
+         
                 return compt2;
             }
 
             else {
 
-                console.log("compt" + compt2);
-                console.log("num" + numDes2);
+           
 
                 compt2 = compt2 + numDes2;
 
 
                 $('#scorePlayer2').html(compt2);
-                console.log("compteur " + compt2);
+           
                 return compt2;
 
             };
@@ -362,7 +363,6 @@ $('#buttonStart').on('click', function () {
 
             comptHold2 = comptHold2 + compt2;
 
-            console.log("compteurHold " + comptHold2);
             $('#currentPlayer2').html(comptHold2);
             compt2 = 0;
             
@@ -371,7 +371,7 @@ $('#buttonStart').on('click', function () {
 
     
         $('.buttonHold').on('click', function () {
-            console.log("button on cliquez")
+           
             gamer2 = false;
             return gamer2;
         });
@@ -383,11 +383,12 @@ $('#buttonStart').on('click', function () {
 
         function comptDecompte2(compt2, comptHold2) {
             comptDec2 = comptHold2 + compt2;
-            console.log("comptDecompte " + comptDec2);
+           
 
             if (comptDec2 >= 100) {
                 $('.winner').html('Joueur 2 Gagne');
-                console.log("victoire");
+                let audio = new Audio('./sons/CRWDApls_Applaudissements 25 50 pers 3 (ID 0814)_LS.wav');
+                audio.play();
             }
             else {
                 $('.winner').html('Jeux en cours');
